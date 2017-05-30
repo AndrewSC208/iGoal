@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MainToolbarComponent } from '../main-toolbar/main-toolbar.component';
 
 @Component({
@@ -8,13 +8,13 @@ import { MainToolbarComponent } from '../main-toolbar/main-toolbar.component';
 			
 			<app-toolbar></app-toolbar>
 
-  		<md-sidenav #sidenav class="example-sidenav">
-    		Jolly good!
-  		</md-sidenav>
-
-  		<div class="example-sidenav-content">
+			<div class="example-sidenav-content">
     		<button md-button (click)="sidenav.open()">Open sidenav</button>
   		</div>
+
+  		<md-sidenav #sidenav class="example-sidenav" mode='push'>
+    		Jolly good!
+  		</md-sidenav>
 
 			<router-outlet></router-outlet>
 
@@ -23,5 +23,5 @@ import { MainToolbarComponent } from '../main-toolbar/main-toolbar.component';
 	styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
-
+	
 }

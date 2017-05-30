@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
 	selector: 'app-toolbar',
 	template: `
-		<md-toolbar>{{ title }}</md-toolbar>
+		<md-toolbar></md-toolbar>
 	`
 })
 export class MainToolbarComponent {
@@ -12,5 +12,4 @@ export class MainToolbarComponent {
 	constructor() {
 		this.title = 'iGoal';
 	}
-
 }
