@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainNavComponent } from './core/main-nav/main-nav.component';
 
 @Component({
   selector: 'app-root',
