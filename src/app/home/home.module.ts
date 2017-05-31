@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CoreModule } from '../core/core.module';
 import { CommonModule } from '@angular/common';
+
+/* Declarable Components*/
 import { HomePageComponent } from './home-page/home-page.component';
-import { routing } from './home.routing';
+
+/* Services */
+// import { HomeService } from './home.service';
+
+/* Routes */
+import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    CoreModule,
-    routing
   ],
   declarations: [HomePageComponent]
 })

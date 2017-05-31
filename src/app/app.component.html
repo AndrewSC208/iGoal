@@ -1,3 +1,17 @@
-<app-main></app-main>
+<md-sidenav-container class="my-content">		
+
+	<div class="example-sidenav-content">
+  	<button md-button (click)="sidenav.open()">Open sidenav</button>
+  </div>
+  
+  <md-sidenav #sidenav class="example-sidenav">
+  	<ul>
+  		<li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+  		<li><a routerLink="/goals" routerLinkActive="active">Goals</a></li>
+  	</ul>
+  </md-sidenav>
+	
+	<router-outlet></router-outlet>
+</md-sidenav-container>
 
 
