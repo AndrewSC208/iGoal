@@ -1,17 +1,29 @@
-<md-sidenav-container class="my-content">		
+<md-sidenav-container class="my-content">
 
-	<div class="example-sidenav-content">
-  	<button md-button (click)="sidenav.open()">Open sidenav</button>
-  </div>
-  
-  <md-sidenav #sidenav class="example-sidenav">
-  	<ul>
-  		<li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-  		<li><a routerLink="/goals" routerLinkActive="active">Goals</a></li>
-  	</ul>
+  <md-sidenav fullscreen #sidenav class="example-sidenav" opened="true" mode="push">
+
+    <md-nav-list>
+
+      <md-list-item *ngFor="let link of links" routerLink="{{link.href}}" (click)="sidenav.close()">
+        <md-icon md-list-icon>{{link.icon}}</md-icon>
+        <span md-line>{{link.name}}</span>
+        <span md-line class="link-description">{{link.description}}</span>
+      </md-list-item>
+
+    </md-nav-list>
+
   </md-sidenav>
-	
+
+  <md-toolbar color="primary">
+
+    <button md-icon-button (click)="sidenav.open()">
+      <md-icon>menu</md-icon>
+    </button>
+    
+  </md-toolbar>
+  	
 	<router-outlet></router-outlet>
+
 </md-sidenav-container>
 
 

@@ -5,9 +5,8 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 /* App Root*/
 import { AppComponent } from './app.component';
-/* Material Modules */
-import { MdSidenavModule } from '@angular/material';
-import { MdButtonModule } from '@angular/material'
+/* Custom Material Module */
+import { MaterialModule } from './shared/material.module';
 /* Feature Modules */
 import { GoalsModule } from './goals/goals.module';
 import { HomeModule } from './home/home.module';
@@ -25,8 +24,7 @@ import { PageNotFoundComponent } from './shared/404page.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MdSidenavModule,
-    MdButtonModule,
+    MaterialModule,
     HomeModule,
     GoalsModule,
     AppRoutingModule,

@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  links: Object[] = [
+  	{ 
+  		name: 'Home', 
+  		href: '/home', 
+  		icon: 'home', 
+  		description: 'Home Base'
+  	},
+  	{ 
+  		name: 'Goals', 
+  		href: '/goals', 
+  		icon: 'trending_up', 
+  		description: 'create and view goals'
+  	},
+    { 
+      name: 'Steps', 
+      href: '/steps', 
+      icon: 'rowing', 
+      description: 'View Steps to achive your goals'
+    }
+  ]
+  
 }

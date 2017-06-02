@@ -1,0 +1,19 @@
+<a md-fab routerLink="." class="goal-fab"><md-icon>add</md-icon></a>
+
+<md-card class="goal-card" *ngFor="let goal of goals">
+
+  <md-card-header>
+    <md-card-title>{{ goal.title }}</md-card-title>
+  </md-card-header>
+
+  <md-card-content>
+    <p>{{ goal.description }}</p>
+    <p>{{ goal.start_date | date:'medium' }}</p>
+    <p>{{ goal.target_date | date:'medium' }}</p>
+    <p>{{ goal.time_requirements }}</p>
+  </md-card-content>
+  <md-card-actions align="end">
+    <button md-raised-button color="primary">Details</button>
+  </md-card-actions>
+
+</md-card>
