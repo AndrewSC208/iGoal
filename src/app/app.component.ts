@@ -19,13 +19,7 @@ export class AppComponent {
   		href: '/goals', 
   		icon: 'trending_up', 
   		description: 'create and view goals'
-  	},
-    { 
-      name: 'Steps', 
-      href: '/steps', 
-      icon: 'rowing', 
-      description: 'View Steps to achive your goals'
-    }
+  	}
   ]
   
 }

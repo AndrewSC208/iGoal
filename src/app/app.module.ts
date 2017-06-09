@@ -13,12 +13,15 @@ import { HomeModule } from './home/home.module';
 /* Routing Module*/
 import { AppRoutingModule } from './app-routing.module';
 
+import { TestComponent } from './test/test.component';
+
 import { PageNotFoundComponent } from './shared/404page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

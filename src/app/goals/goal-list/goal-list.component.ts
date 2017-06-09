@@ -1,38 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { Goal } from '../goal';
+import { GoalService } from '../goal.service';
 
 @Component({
-	selector: 'goal-list',
+	selector:    'goal-list',
 	templateUrl: 'goal-list.component.html',
-	styleUrls: [ 'goal-list.component.scss' ]
+	styleUrls: [ 'goal-list.component.scss' ],
+	providers: [ GoalService ]
 })
-export class GoalListComponent {
+export class GoalListComponent implements OnInit {
 
-	goals: Goal[] = [
-		{
-			id: 1,
-  			title: 'Learn to Program',
-  			description: 'I want to be a great programmer',
-  			start_date: '2017-06-02T17:02:55.113Z',
-			target_date: '2017-06-02T17:02:55.113Z',
-			time_requirements: '30 Minutes a day'
-		},
-		{
-			id: 2,
-  			title: 'Learn to Program',
-  			description: 'I want to be a great programmer',
-  			start_date: '2017-06-02T17:02:55.113Z',
-			target_date: '2017-06-02T17:02:55.113Z',
-			time_requirements: '30 Minutes a day'
-		},
-		{
-			id: 3,
-  			title: 'Learn to Program',
-  			description: 'I want to be a great programmer',
-  			start_date: '2017-06-02T17:02:55.113Z',
-			target_date: '2017-06-02T17:02:55.113Z',
-			time_requirements: '30 Minutes a day'
-		},
-	];
-	
+	goals: Goal[];
+
+	constructor(  
+		private router: Router,
+  		private goalService: GoalService
+  	) {}
+
+  	ngOnInit(): void {
+  		this.goalService.getGoals().then(goals => this.goals = goals);
+  	}
+
+  	onSelect(goal: Goal) {
+  		//console.log(goal);
+  		this.router.navigate(['/goal', goal.id]);
+  	}
+
 }
