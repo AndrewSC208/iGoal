@@ -24,7 +24,7 @@ export class GoalListComponent implements OnInit {
   	}
 
   	onSelect(goal: Goal) {
-  		//console.log(goal);
+  		console.log(goal);
   		this.router.navigate(['/goal', goal.id]);
   	}
 

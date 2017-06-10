@@ -1,12 +1,7 @@
-<h2>Goal</h2>
-<p>Lets see if this works</p>
-
-<div class="container">
-	<div *ngIf="condition">
-		<p>If an :id token was not found</p>
-	</div>
-
-	<div class="">
-		<p>detailed view</p>
-	</div>
-</div>
+<md-card class="goal-card">
+  <md-card-content>
+  	<h2>{{ goal.title }}</h2>
+  	<p>{{ goal.description }}</p>
+    <p>Start: {{ goal.start_date | date:shortDate}}</p>
+  </md-card-content>
+</md-card>

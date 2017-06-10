@@ -13,7 +13,14 @@ import { GoalService } from '../goal.service';
 })
 export class GoalDetailComponent implements OnInit {
 
-	goal: Goal; 
+	goal: Goal = {
+		id: 0,
+		title: '',
+		description: '',
+		start_date: '',
+		target_date: '',
+		time_requirements: ''
+	}
 
 	constructor(
 		private route: ActivatedRoute,
