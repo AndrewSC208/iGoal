@@ -1,8 +1,29 @@
+<md-toolbar color="accent">
+  <button md-icon-button (click)="sidenav.open()">
+    <md-icon>menu</md-icon>
+  </button>
+
+  <span class="toolbar-filler"></span>
+
+  <span>iGoal Mockup</span>
+</md-toolbar>
+
 <md-sidenav-container class="my-content">
 
   <md-sidenav fullscreen #sidenav class="example-sidenav" opened="true" mode="push">
 
     <md-nav-list>
+      <md-card class="userCard">
+        <md-card-header>
+          <img md-card-image src="http://via.placeholder.com/150X150">
+        </md-card-header>
+          <md-card-actions>
+            <button md-icon-button>
+              <md-icon>settings</md-icon>
+            </button>
+          </md-card-actions>
+      </md-card>
+      
 
       <md-list-item *ngFor="let link of links" routerLink="{{link.href}}" (click)="sidenav.close()">
         <md-icon md-list-icon>{{link.icon}}</md-icon>
@@ -13,14 +34,6 @@
     </md-nav-list>
 
   </md-sidenav>
-
-  <md-toolbar color="primary">
-
-    <button md-icon-button (click)="sidenav.open()">
-      <md-icon>menu</md-icon>
-    </button>
-    
-  </md-toolbar>
 
   <!-- <app-test></app-test> -->
   	

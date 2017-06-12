@@ -7,3 +7,17 @@ html, body, material-app, md-sidenav-container, .my-content {
 .link-description {
 	color: rgba(0,0,0, .54);
 }
+
+.toolbar-filler {
+	flex: 1 1 auto;
+}
+
+md-card {
+	padding-right: 40px;
+}
+
+img {
+    border-radius: 50%;
+    width: 150px;
+    margin: 0 auto;
+}
