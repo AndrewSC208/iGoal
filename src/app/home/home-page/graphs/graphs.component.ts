@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { multi } from '../../mock-data';
 
 @Component({
-  selector: 'home-graphs',
+  selector: 'home-graph',
   templateUrl: './graphs.component.html',
   styleUrls: ['./graphs.component.scss']
 })
@@ -18,7 +18,7 @@ export class GraphsComponent implements OnInit {
   single: any[];
   multi: any[];
 
-  view: any[] = [1000, 250];
+  view: any[] = [1220, 250];
 
   // options
   showXAxis = true;

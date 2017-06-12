@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-
 import { MaterialModule } from '../shared/material.module';
 
 /* Declarable Components*/

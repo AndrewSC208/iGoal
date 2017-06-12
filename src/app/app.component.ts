@@ -14,12 +14,12 @@ export class AppComponent {
   		icon: 'home', 
   		description: 'Home Base'
   	},
-  	{ 
-  		name: 'Goals', 
-  		href: '/goals', 
-  		icon: 'trending_up', 
-  		description: 'create and view goals'
-  	}
+    { 
+      name: "Todo's", 
+      href: '/todo', 
+      icon: 'trending_up', 
+      description: 'create and view goals'
+    }
   ]
   
 }

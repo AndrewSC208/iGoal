@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
+	graphTitle: string = "Achivments";
+	guageTitle: string = "Something";
+	listTitle: string = "To do List"
+
   constructor() { }
 
   ngOnInit() {

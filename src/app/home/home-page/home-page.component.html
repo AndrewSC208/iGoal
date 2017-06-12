@@ -1,7 +1,21 @@
 <md-grid-list cols="2" rowHeight="400px">
-  <md-grid-tile [colspan]=2 [style.background]="lightblue">
-      <home-graphs></home-graphs>
-  </md-grid-tile>
-  <md-grid-tile>3</md-grid-tile>
-  <md-grid-tile>4</md-grid-tile>
+
+  	<md-grid-tile [colspan]=2>
+  		<md-card>
+  		
+  			<md-card-header>
+    			<md-card-title><h2>{{ graphTitle }}</h2></md-card-title>
+  			</md-card-header>
+  		
+  			<md-card-content>
+				<home-graph></home-graph>
+ 			</md-card-content>
+
+		</md-card>
+  	</md-grid-tile>
+
+  	<md-grid-tile [colspan]=2>
+    
+  	</md-grid-tile>
+
 </md-grid-list>
