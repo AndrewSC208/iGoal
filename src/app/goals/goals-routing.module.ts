@@ -1,22 +1,14 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { GoalsComponent } from './goals.component';
 import { GoalListComponent } from './goal-list/goal-list.component';
 import { GoalDetailComponent } from './goal/goal.component';
 
-const goalsRoutes: Routes = [
-	{ path: 'goals', component: GoalListComponent},
+const routes: Routes = [
+	{ path: '', component: GoalsComponent},
 	{ path: 'goal', component: GoalDetailComponent },
-	{ path: 'goal/:id', component: GoalDetailComponent},
 ];
 
-@NgModule({
-	imports: [
-		RouterModule.forChild(goalsRoutes)
-	],
-	exports: [
-		RouterModule
-	]
-})
-export class GoalsRoutingModule {}
+export const routing: ModuleWithProviders = RouterModule.forChild(routes);
 

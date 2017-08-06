@@ -1,4 +1,4 @@
-<md-toolbar color="accent">
+<md-toolbar color="primary">
   <button md-icon-button (click)="sidenav.open()">
     <md-icon>menu</md-icon>
   </button>
@@ -8,11 +8,12 @@
   <span>iGoal Mockup</span>
 </md-toolbar>
 
-<md-sidenav-container class="my-content">
+ <md-sidenav-container class="my-content">
 
-  <md-sidenav fullscreen #sidenav class="example-sidenav" opened="true" mode="push">
+  <md-sidenav fullscreen #sidenav class="example-sidenav" mode="over">
 
     <md-nav-list>
+
       <md-card class="userCard">
         <md-card-header>
           <img md-card-image src="http://via.placeholder.com/150X150">
@@ -34,11 +35,9 @@
     </md-nav-list>
 
   </md-sidenav>
-
-  <!-- <app-test></app-test> -->
   	
 	<router-outlet></router-outlet>
   
-</md-sidenav-container>
+</md-sidenav-container> 
 
 
